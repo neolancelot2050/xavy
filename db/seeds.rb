@@ -22,6 +22,11 @@ venues = Venue.create([
     description: 'Centro de escalada animal.',
     phone: '2124705'
   },
+  {
+    name: 'La jirafa flexible',
+    description: 'Pilates a tu medida.',
+    phone: '2124705'
+  },
 ])
 
 venues.each.with_index(1) do |venue, index|
@@ -40,3 +45,6 @@ Activity.create(name: 'Yoga meditación', description: 'Paz mental', schedule: '
 
 Activity.create(name: 'Clase de escalada', description: 'Aprende las bases', schedule: 'De 8:00am a 5:00pm', venue: Venue.third)
 Activity.create(name: 'Entrada libre', description: 'Una hora de acceso a todos los salones', schedule: 'De 8:00am a 5:00pm', venue: Venue.third)
+
+Activity.create(name: 'Pilates reformer', description: 'Estírate', schedule: 'De 8:00am a 5:00pm', venue: Venue.fourth)
+Activity.create(name: 'Pilates re-reformer', description: 'Restírate', schedule: 'De 8:00am a 5:00pm', venue: Venue.fourth)

@@ -15,6 +15,8 @@ Para comenzar a trabajar en el ejercicio sin realizar la instalación local del 
 
 Una vez hayas hecho el fork del proyecto en tu github, podrás entrar a Cloud 9 y sincronizar el respositorio con el ambiente de desarrollo virtual.
 
+Esta opción está especialmente recomendada para las personas que tienen como ambiente de trabajo Windows, pues es el sistema operativo en el que se tienden a encontrar más problemas de configuración.
+
 ### Opción 2: Instalación local
 
 #### Linux
@@ -34,13 +36,33 @@ Seguir las instrucciones de este link (https://gorails.com/setup/osx/10.13-high-
 
 3. Desde la consola de comandos en modo administrador instalar bundler:
 
-   `gem install rails 5.2.1`
+   `gem install rails 5.2.2`
 
-4. Instalar SQLLite3 siguiendo estas indicaciones (https://www.tutorialspoint.com/sqlite/sqlite_installation.htm)
+4. Instalar PostgresSQL 10 usando el instalador en (https://www.postgresql.org/download/windows/)
+
+5. Ingresar a la consola de Postgres (se puede encontrar buscándola en el menú de inicio y buscando SQL Shell (psql))
+
+6. Desde la consola de Postgres crear un rol con el usuario actual de windows. IMPORTANTE: El rol debe tener en cuenta las mayúsculas y minúsculas del nombre de usuario, por lo tanto debe ir entre comillas para que se cree correctamente:
+
+Ejemplo, si mi usuario de windows es Felipe, el comando para crear el rol sería:
+
+```
+CREATE ROLE "Felipe" SUPERUSER;
+```
+
+Por favor tener en cuenta las comillas.
 
 ## Proyecto
 
-El proyecto de pruebas se entrega en estado funcional, con datos iniciales y con sus respectivas pruebas unitarias, de integración y de sistema.
+El proyecto de pruebas se entrega en estado funcional, con datos iniciales y con sus respectivas pruebas unitarias y de integración.
+
+### Dependencias y librerias
+
+- Simple Form para la generación de formularios [link](https://github.com/plataformatec/simple_form)
+- Bootstrap 4 para los estilos [link](https://getbootstrap.com)
+- Minitest para las pruebas unitarias [link](https://guides.rubyonrails.org/testing.html)
+
+### Desarrollo del ejercicio
 
 Para iniciar el proyecto se deben seguir los siguientes pasos:
 
@@ -49,19 +71,19 @@ Para iniciar el proyecto se deben seguir los siguientes pasos:
 
 2. Instalar las librerias del proyecto `bundle install`
 
-3. Ejecutar el comando `bundle exec rails app:update:bin`  
+3. Ejecutar el comando `bundle exec rails app:update:bin`
 
-3. Crear la base de datos `bundle exec rails db:create`
+4. Crear la base de datos `bundle exec rails db:create`
 
-4. Ejecutar las migraciones `bundle exec rails db:migrate`
+5. Ejecutar las migraciones `bundle exec rails db:migrate`
 
-5. Cargar los datos de prueba `bundle exec rails db:seed`
+6. Cargar los datos de prueba `bundle exec rails db:seed`
 
-6. Ejecutar la aplicación `bundle exec rails server`
+7. Ejecutar la aplicación `bundle exec rails server`
 
-7. Entrar a http://localhost:3000 para ver la aplicación
+8. Entrar a http://localhost:3000 para ver la aplicación
 
-8. Entrar a http://localhost:3000/admin para ver el panel de administrador
+9. Entrar a http://localhost:3000/admin para ver el panel de administrador
 
 Comandos adicionales:
 
@@ -69,12 +91,12 @@ Comandos adicionales:
 
 10. Abrir la consola de rails (permite ejecutar comandos usando las clases definidas dentro del proyecto) `rails console`
 
-PD: Antes de ejecutar las pruebas unitarias se debe crear/actualizar la base de datos de pruebas
+PD: Antes de ejecutar las pruebas unitarias es posible que se deba crear/actualizar la base de datos de pruebas.
 
 `rails db:create RAILS_ENV=test`
 `rails db:migrate RAILS_ENV=test`
 
-Nota respecto a la base de datos: El proyecto está configurado para usar la base de datos sqlite3 ya que es la base de datos que requiere menos configuración. Si prefieres trabajar con alguna de las otras bases de datos disponibles en Rails, recuerda cambiar el archivo `config/database.yml` y actualizar el `Gemfile` para usar la librería correcta:
+Nota respecto a la base de datos: El proyecto está configurado para usar la base de datos postgresql por default, sin embargo no es obligatorio. Si prefieres trabajar con alguna de las otras bases de datos disponibles en Rails como MySql, Sqlite3, etc. recuerda cambiar el archivo `config/database.yml` y actualizar el `Gemfile` para usar la librería correcta:
 
 Ejemplo: Gemfile
 
@@ -126,6 +148,12 @@ Xavy.com es un directorio de centros de Fitness and Wellness. La aplicación est
 Por petición de nuestros usuarios, se quiere permitir que los centros deportivos puedan seleccionar entre las dificultadoes (bajo, medio, alto para cada) de las actividades. Igualmente los usuarios deben poder consultar la dificultad de cada actividad desde el directorio.
 
 Igualmente se quiere poder "taggear" las distintas actividades con una o más categorías para que los usuarios puedan poner en contexto los nombres de las distintas actividades que ofrecen loscentros. Estas categorías se deben crear a través de la interfaz del administrador y se deben poder asignar a las actividades.
+
+Por último, nuestros usuarios han expresado que sienten dificultad al momento de encontrar los centros deportivos. Una queja común es que salen demasiados resultados, y no hay una forma de filtrarlos. Por lo tanto, queremos ofrecerles a los usuarios la posibilidad de filtrar los centros deportivos que aparecen en el índice según su nombre.
+
+==============================BONUS==================================================
+
+Nuestro equipo de diseño determinó que para brindar la mejor experiencia de usuario, debemos permitir a las personas filtrar los resultados según los Tags de categorías que fueron desarrollados en el segundo punto de este ejercicio.
 
 ### Recomendaciones
 
