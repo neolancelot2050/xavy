@@ -153,7 +153,7 @@ Por último, nuestros usuarios han expresado que sienten dificultad al momento d
 
 ==============================BONUS==================================================
 
-Nuestro equipo de diseño determinó que, para brindar la mejor experiencia de usuario, debemos ofrecer, adicional al filtro por nombre, la posibilidad de filtrar los resultados según los Tags de categorías que fueron desarrollados en el segundo punto de este ejercicio.
+Nuestro equipo de diseño determinó que para brindar la mejor experiencia de usuario, debemos ofrecerla posibilidad de filtrar los resultados según los Tags de categorías que fueron desarrollados en el segundo punto de este ejercicio, adicional al filtro por nombre de centro.
 
 ### Recomendaciones
 
