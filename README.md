@@ -29,7 +29,7 @@ Seguir las instrucciones de este link (https://gorails.com/setup/osx/10.13-high-
 
 #### Windows
 
-1. Instalar ruby: [windows](https://rubyinstaller.org/)
+1. Instalar ruby 2.6.3: [windows](https://rubyinstaller.org/)
 2. Desde la consola de comandos en modo administrador instalar bundler:
 
    `gem install bundler`
