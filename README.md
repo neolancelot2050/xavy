@@ -145,7 +145,7 @@ production:
 
 Xavy.com es un directorio de centros de Fitness and Wellness. La aplicación está estructurada en dos partes. Una parte pública donde de pueden consultar los distintos centros con sus respectivas actividades y una parte para que los administradores de la aplicación puedan actualizar la información de los centros.
 
-Por petición de nuestros usuarios, se quiere permitir que los centros deportivos puedan seleccionar entre las dificultadoes (bajo, medio, alto para cada) de las actividades. Igualmente los usuarios deben poder consultar la dificultad de cada actividad desde el directorio.
+Por petición de nuestros usuarios, se quiere permitir que los centros deportivos puedan seleccionar entre las dificultades (bajo, medio, alto) para cada de las actividades. Igualmente los usuarios deben poder consultar la dificultad de cada actividad desde el directorio.
 
 Igualmente se quiere poder "taggear" las distintas actividades con una o más categorías para que los usuarios puedan poner en contexto los nombres de las distintas actividades que ofrecen loscentros. Estas categorías se deben crear a través de la interfaz del administrador y se deben poder asignar a las actividades.
 
