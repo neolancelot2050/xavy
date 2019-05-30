@@ -149,11 +149,11 @@ Por petición de nuestros usuarios, se quiere permitir que los centros deportivo
 
 Igualmente se quiere poder "taggear" las distintas actividades con una o más categorías para que los usuarios puedan poner en contexto los nombres de las distintas actividades que ofrecen loscentros. Estas categorías se deben crear a través de la interfaz del administrador y se deben poder asignar a las actividades.
 
-Por último, nuestros usuarios han expresado que sienten dificultad al momento de encontrar los centros deportivos. Una queja común es que salen demasiados resultados, y no hay una forma de filtrarlos. Por lo tanto, queremos ofrecerles a los usuarios la posibilidad de filtrar los centros deportivos que aparecen en el índice según su nombre.
+Por último, nuestros usuarios han expresado que sienten dificultad al momento de encontrar los centros deportivos. Una queja común es que salen demasiados resultados, y no hay una forma de filtrarlos. Por lo tanto, queremos ofrecerles a los usuarios la posibilidad de filtrar los centros deportivos que aparecen en el índice según su nombre. Para esto debemos desarrollar un formulario en la lista de centros que permita ingresar un texto y filtrar los centros desplegados según este filtro.
 
 ==============================BONUS==================================================
 
-Nuestro equipo de diseño determinó que para brindar la mejor experiencia de usuario, debemos permitir a las personas filtrar los resultados según los Tags de categorías que fueron desarrollados en el segundo punto de este ejercicio.
+Nuestro equipo de diseño determinó que, para brindar la mejor experiencia de usuario, debemos ofrecer, adicional al filtro por nombre, la posibilidad de filtrar los resultados según los Tags de categorías que fueron desarrollados en el segundo punto de este ejercicio.
 
 ### Recomendaciones
 
