@@ -1,0 +1,13 @@
+<tr>
+  <td>
+    <%= category.id %>
+  </td>
+  <td>
+    <%= category.description %>
+  </td>
+  <td class="text-right">
+    <%= link_to 'Ver', admin_category_path(category), class: 'btn btn-outline-dark' %>
+    <%= link_to 'Editar', edit_admin_category_path(category), class: 'btn btn-outline-dark' %>
+    <%= link_to 'Destruir', admin_category_path(category), class: 'btn btn-outline-danger', method: :delete, data: {confirm: '¿Está seguro?'} %>
+  </td>
+</tr>

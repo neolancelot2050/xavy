@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <div class="panel">
+    <div class="panel__header">
+      <h5>Editar Categoria</h5>
+      <%= link_to 'Cancel', admin_categories_path, class: 'btn btn-outline-danger' %>
+    </div>
+    <div class="panel__content">
+      <%= render 'form', url: admin_category_path(@category) %>
+    </div>
+  </div>
+</div>

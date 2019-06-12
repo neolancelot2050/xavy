@@ -1,0 +1,22 @@
+<% content_for :header do %>
+<div class="admin__header">
+  <h5 class="mr-auto">
+    Categorias
+  </h5>
+  <%= link_to 'Nuevo', new_admin_category_path, class: 'btn btn-outline-success' %>
+</div>
+<% end %>
+
+<div class="admin__content">
+  <table class="table admin__table">
+    <thead>
+      <tr>
+        <th class="border-top-0" scope="col">Descripción</th>
+        <th class="border-top-0" scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @categories %>
+    </tbody>
+  </table>
+</div>

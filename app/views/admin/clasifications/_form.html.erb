@@ -1,0 +1,6 @@
+<%= simple_form_for @clasification, url: url, html: { novalidate: true, class: 'needs-validation' }   do |f| %>
+<%= f.input :activity_id, collection: Activity.by_name, as: :select, label_method: :name, value_method: :id, required: true%>
+<%= f.input :category_id, collection: Category.by_description, as: :select, label_method: :description, value_method: :id, required: true%>
+
+<%= f.button :submit %>
+<% end %>

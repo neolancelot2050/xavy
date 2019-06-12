@@ -7,6 +7,20 @@
       <p class="card-text">
         <%= activity.description %>
       </p>
+      <p> Nivel de Dificultad:
+        <span class="badge badge-primary">
+        <%= activity.difficultylevel %>
+        </span>
+      </p>
+      <p> Clasification:
+        <span class="badge badge-secondary">
+        <% clasification = Activity.find_by(id:activity.id).clasifications %>
+        <% clasification.each do |c|%>
+        <br><%= Category.find(c.category_id).description %><br>
+        <%end%>
+        <br>
+        </span>
+      </p>
     </div>
   </div>
 </div>

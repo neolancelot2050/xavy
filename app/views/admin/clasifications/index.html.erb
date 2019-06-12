@@ -1,0 +1,22 @@
+<% content_for :header do %>
+<div class="admin__header">
+  <h5 class="mr-auto">
+    Clasificación Actividad-Categorias
+  </h5>
+  <%= link_to 'Nuevo', new_admin_clasification_path, class: 'btn btn-outline-success' %>
+</div>
+<% end %>
+
+<div class="admin__content">
+  <table class="table admin__table">
+    <thead>
+      <tr>
+        <th class="border-top-0" scope="col">Actividad</th>
+        <th class="border-top-0" scope="col">Categoría</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @clasifications %>
+    </tbody>
+  </table>
+</div>

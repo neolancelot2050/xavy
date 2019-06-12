@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     get '/' => 'activities#index'
     resources :activities
     resources :venues
+    resources :categories
+    resources :clasifications
   end
 
   resources :venues, only: [:index, :show]

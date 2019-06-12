@@ -5,21 +5,26 @@
 #   gem 'postgresql'
 #
 default: &default
-  adapter: postgresql
+  #adapter: postgresql
+  adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
-  database: xavy_development
+  database: db/development.sqlite3
+  #  database: xavy_development
 
 test:
   <<: *default
-  database: xavy_test
+  database: db/test.sqlite3
+  #  database: xavy_test
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  username: xavy
-  password: <%= ENV['XAVY_DATABASE_PASSWORD'] %>
-  pool: 5
+  <<: *default
+  database: db/production.sqlite3
+#  adapter: postgresql
+#  encoding: unicode
+#  username: xavy
+#  password: <%= ENV['XAVY_DATABASE_PASSWORD'] %>
+#  pool: 5
