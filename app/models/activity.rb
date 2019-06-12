@@ -25,7 +25,8 @@ class Activity < ApplicationRecord
   validates :description, presence: true
   validates :schedule, presence: true
 
-  has_many :clasifications, dependent: :destroy
+  #OAVS
+  has_many :clasifications#, dependent: :destroy
   has_many :categories, through: :clasifications
 
 end

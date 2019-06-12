@@ -9,7 +9,8 @@
 #
 
 class Category < ApplicationRecord
-	has_many :clasifications, dependent: :destroy
+	#OAVS
+	has_many :clasifications#, dependent: :destroy
   	has_many :activities, through: :clasifications
 
   scope :by_description, -> { order(:description) }

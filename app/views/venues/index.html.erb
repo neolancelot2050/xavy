@@ -4,10 +4,24 @@
       Bienvenido a Xavy! Tu directorio de centros deportivos.
     </h1>
   </div>
+  <!--Input para Búsqueda -->
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <hr class="separator" />
-  <div class="container-fluid my-5">
+  <div class="container-fluid my-5" id="myActivities">
     <div class="row">
       <%= render partial: 'venue', collection: @venues %>
     </div>
   </div>
 </div>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    console.log($(this).val());
+    var value = $(this).val().toLowerCase();
+    $("#myActivities .card").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
