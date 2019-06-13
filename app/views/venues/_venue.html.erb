@@ -16,9 +16,6 @@
           <%= venue.phone %>
         </div>
       </p>
-      <p>
-        <%= Category.find(Clasification.find_by(activity_id: venue.activities.ids).category_id).description %>
-      </p>
       <%= link_to 'Ver más', venue_path(venue), class: 'btn btn-primary' %>
     </div>
   </div>
