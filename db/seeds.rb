@@ -48,3 +48,15 @@ Activity.create(name: 'Entrada libre', description: 'Una hora de acceso a todos 
 
 Activity.create(name: 'Pilates reformer', description: 'Estírate', schedule: 'De 8:00am a 5:00pm', venue: Venue.fourth)
 Activity.create(name: 'Pilates re-reformer', description: 'Restírate', schedule: 'De 8:00am a 5:00pm', venue: Venue.fourth)
+
+Category.create(description: 'Halterofilia')
+Category.create(description: 'Peso Corporal')
+Category.create(description: 'Artes Marciales')
+Category.create(description: 'Estiramiento')
+Category.create(description: 'Movimiento Cuerpo')
+Category.create(description: 'Acrobacias')
+
+Clasification.create(category_id: '1', activity_id: '1')
+
+
+
